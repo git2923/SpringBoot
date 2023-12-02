@@ -44,15 +44,19 @@ public class DemoApplication {
 
 
 		//Using Custom method from userRepo
-		List<User> list = userRepo.findByNameStartingWith("Aditya");
-		for(User u:list){
-			System.out.println(u);
-		}
+//		Iterable<User> itr = userRepo.findAll();
+//		for(User u:itr){
+//			System.out.println(u);
+//		}
+//
+//		Optional<User> obj = userRepo.findById(3);
+//		System.out.println(obj);
 
-		list = userRepo.findByNameEndingWith("abh");
-		for(User u:list){
+		// Using DB method create with Native Query
+		List<User> list = userRepo.getUserByName("sourabh");
+		list.forEach(u ->{
 			System.out.println(u);
-		}
+		});
 
 	}
 
