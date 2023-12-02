@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
@@ -40,6 +41,19 @@ public class DemoApplication {
 
 		//delete
 //		userRepo.deleteById(52);
+
+
+		//Using Custom method from userRepo
+		List<User> list = userRepo.findByNameStartingWith("Aditya");
+		for(User u:list){
+			System.out.println(u);
+		}
+
+		list = userRepo.findByNameEndingWith("abh");
+		for(User u:list){
+			System.out.println(u);
+		}
+
 	}
 
 }
