@@ -53,10 +53,10 @@ public class DemoApplication {
 //		System.out.println(obj);
 
 		// Using DB method create with Native Query
-		List<User> list = userRepo.getUserByName("sourabh");
-		list.forEach(u ->{
-			System.out.println(u);
-		});
+//		List<User> list = userRepo.getUserByName("sourabh");
+//		list.forEach(u ->{
+//			System.out.println(u);
+//		});
 
 	}
 
